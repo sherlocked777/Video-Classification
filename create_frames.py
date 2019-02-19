@@ -9,7 +9,7 @@ from keras.utils import np_utils
 from skimage.transform import resize   # for resizing images
 
 count = 0
-videoFile = "Tom and jerry.mp4"
+videoFile = "Tom and Jerry 3.mp4"
 cap = cv2.VideoCapture(videoFile)   # capturing the video from the given path
 frameRate = cap.get(5) #frame rate
 x=1
@@ -19,7 +19,7 @@ while(cap.isOpened()):
     if (ret != True):
         break
     if (frameId % math.floor(frameRate) == 0):
-        filename ="frame%d.jpg" % count;count+=1
+        filename ="test%d.jpg" % count;count+=1
         cv2.imwrite(filename, frame)
 cap.release()
 print ("Done!")
